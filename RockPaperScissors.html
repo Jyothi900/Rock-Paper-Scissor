@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head><title>RPSgame</title></head>
+  <h1 class="h1">Rock Paper scissor </h1>
+  <br><br>
+  <body>
+    <button class="rock" onclick="
+    const randomNumber=Math.random();
+    let computerMove='';
+    let result='';
+    let computerChoise='';
+    let you='&#9994';
+
+    if(randomNumber>=0 && randomNumber<1/2){computerMove='rock'; computerChoise='&#9994';}
+    else if(randomNumber>=1/2 && randomNumber<2/3){computerMove='paper'; computerChoise='&#9995';}
+    else if(randomNumber>=2/3 && randomNumber<1) {computerMove='scissor'; computerChoise='&#9996';}
+    
+    if(computerMove==='rock') result='Tie';
+    else if(computerMove==='paper') result='Lose';
+    else if(computerMove==='scissor') result='win';
+    
+    if(result==='Tie') Ties++;
+    else if(result==='win') wins++;
+    else Losses++;
+    document.getElementById('res').innerHTML='Result : '+result;
+    document.getElementById('emoji').innerHTML='your choice : '+you+'computer choice :'+ computerChoise;
+    document.getElementById('points').innerHTML='Wins :'+ wins +',Losess : '+Losses+',Ties : '+Ties;
+    //alert(`Your Move : rock  computerMove : ${computerMove}  result: ${result}`);
+    ">&#9994</button>
+    
+    <button class="paper" onclick="
+    const randomNumber2=Math.random();
+    let computerMove2='';
+    let result2='';
+    let computerChoise2='';
+    let you2='&#9995';
+
+    if(randomNumber2>=0 && randomNumber2<1/2){computerMove2='rock'; computerChoise2='&#9994';}
+    else if(randomNumber2>=1/2 && randomNumber2<2/3){ computerMove2='paper'; computerChoise2='&#9995';}
+    else if(randomNumber2>=2/3 && randomNumber2<1) { computerMove2='scissor';computerChoise2='&#9996';}
+     
+    if(computerMove2==='rock') result2='win';
+    else if(computerMove2==='paper') result2='Tie';
+    else if(computerMove2==='scissor') result2='lose';
+    
+    if(result2==='Tie') Ties++;
+    else if(result2==='win') wins++;
+    else Losses++;
+
+    document.getElementById('res').innerHTML='Result :' +result2;
+    document.getElementById('emoji').innerHTML='your choice : '+you2+'computer choice :'+ computerChoise2;
+    document.getElementById('points').innerHTML='Wins :'+ wins +',Losess : '+Losses+',Ties : '+Ties;
+    //alert(`Your Move :paper  computerMove : ${computerMove2}  result: ${result2}`);
+    ">&#9995</button>
+
+    <button class="scissor" onclick="
+    const randomNumber3=Math.random();
+    let computerMove3='';
+    let result3='';
+    let computerChoise3='';
+    let you3='&#9996';
+
+    if(randomNumber3>=0 && randomNumber3<1/2) {computerMove3='rock';computerChoise3='&#9994';}
+    else if(randomNumber3>=1/2 && randomNumber3<2/3){ computerMove3='paper';computerChoise3='&#9995';}
+    else if(randomNumber3>=2/3 && randomNumber3<1) { computerMove3='scissor';computerChoise3='&#9996';}
+    
+    if(computerMove3==='rock') result3='lose';
+    else if(computerMove3==='paper') result3='win';
+    else if(computerMove3==='scissor') result3='Tie';
+    
+    if(result3==='Tie') Ties++;
+    else if(result3==='win') wins++;
+    else Losses++;
+
+    document.getElementById('res').innerHTML='Result :'+result3;
+    document.getElementById('emoji').innerHTML='your choice : '+you3+'computer choice :'+ computerChoise3;
+    document.getElementById('points').innerHTML='Wins :'+ wins +',Losess : '+Losses+',Ties : '+Ties;
+    //alert(`Your Move : scissor  computerMove : ${computerMove3}  result: ${result3}`);
+    ">&#9996</button>
+   
+    <p id="res" class="a"></p>
+    <p id="emoji" class="b"></p>
+    <p id="points"></p> 
+
+    <button class="reset" onclick="
+    wins=0;
+    Losses=0;
+    Ties=0; 
+    document.getElementById('points').innerHTML='Wins :'+ wins +',Losess : '+Losses+',Ties : '+Ties;
+    ">Reset</button>
+  </body>
+  <style>
+    .rock,.paper,.scissor{
+      width:100px;
+      height:100px;
+      border-radius:50%;
+      border-style: double;
+      border-color: aliceblue;
+      font-size: 50px;
+      background-color: rgb(35, 37, 37);
+      margin:5px;
+      
+    }
+    *{background-color: black;}
+    .a,h1{
+       font-size:40px;
+       color:white;
+      }
+    #emoji,#points{
+      font-size: 30px;
+      color:white;
+    }
+    .reset{
+      margin: none;
+      font-size: 30px;
+      color:black;
+      background-color: white;
+
+    }
+  </style>
+  <script>
+    let wins=0;
+    let Losses=0;
+    let Ties=0;
+  </script>
+</html>
